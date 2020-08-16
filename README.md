@@ -1,7 +1,5 @@
 # Somatic Mutation Clustering
 Somatic Mutation data Clustering
-# Somatic Mutation Clustering
-Somatic Mutation data Clustering
 I am dealing with similar task. Here are my findings that may be of help for somebody else.
 
 Somatic mutations are said to be spare and heterogeneous. So using them for clustering is not going to be straightforward task. Before jumping to clustering methods there are suggestions on how you may go to de-sparsify your data. For instance, knowledge on gene-gene network are usually considered for data de-sparsification . A detailed discussion could be find here. I am not-covering desparsification methods in this answer.
