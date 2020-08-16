@@ -18,9 +18,9 @@ You did not provide details on your input data, so exact code is not possible to
 
 1- Making mutation count/binary matrix: In my case, I am dealing with TCGA data, and so there are maf files and could be converted to the matrix by maftools package by mutCountMatrix function.This will provide a count matrix. you may need to convert it to binary (0,1) code. 
 
-<library(maftools)
-mtx <- mutCountMatrix(maf, includeSyn = FALSE, countOnly = NULL, removeNonMutated = FALSE) #maf file contains mutation infor
-#transpose mtx to have genes in columns and samples in row
-mtx <- t(mtx)
-#Convert counts to binary
-mtx.b <- apply(mtx, 2, function(x) ifelse(x > 0, 1, x)) # So 0 = no, 1 =yes>
+`library(maftools)`
+`mtx <- mutCountMatrix(maf, includeSyn = FALSE, countOnly = NULL, removeNonMutated = FALSE) #maf file contains mutation infor`
+`#transpose mtx to have genes in columns and samples in row`
+`mtx <- t(mtx)`
+`#Convert counts to binary`
+`mtx.b <- apply(mtx, 2, function(x) ifelse(x > 0, 1, x)) # So 0 = no, 1 =yes>`
