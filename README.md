@@ -67,12 +67,13 @@ dis.gower <- daisy(cout_mtx.b, metric = c("gower")) # this shows you a warning m
 ag.clust.com <- hclust(dis.gower, method = "complete") # there are different method for HC here we use coplete. 
 plot(ag.clust.com, cex = 0.7, main = "complete linkages agglomerative HC") # looking at dendrogram 4 clusters is imaginable
 ```
-![alt text]https://github.com/hamid-gen/mutation_clustering/blob/master/dendrogram.PNG
+![alt text](https://github.com/hamid-gen/mutation_clustering/blob/master/dendrogram.PNG)
+
 To show clusters on denderogram.
 ```R
 rect.hclust(ag.clust.com, k = 4, border = 2:5)
 ```
-![alt text]https://github.com/hamid-gen/mutation_clustering/blob/master/dendrogram_2.PNG
+![alt text](https://github.com/hamid-gen/mutation_clustering/blob/master/dendrogram_2.PNG)
 
 Cluster stats are comming out as list which is not convenient  to read. I borrowed the *cstats.table* function from @Anastasia Reusova from [Towards Data Science](https://towardsdatascience.com/hierarchical-clustering-on-categorical-data-in-r-a27e578f2995?source=user_profile---------2-----------------------) to convet stats into a data frame.
 ```R
@@ -128,4 +129,4 @@ df <- cout_mtx.b
 row.names(df) <- NULL
 pheatmap(df, cutree_rows = 4, border_color = NA, cellwidth = 10)
 ```
-![alt text]https://github.com/hamid-gen/mutation_clustering/blob/master/heatmap.PNG
+![alt text](https://github.com/hamid-gen/mutation_clustering/blob/master/heatmap.PNG)
